@@ -22,6 +22,7 @@ namespace Fitness.App.Api.Application.BodyPart.Commands
 
         public async Task<EditBodyPartResult> Handle(EditBodyPartCommand request, CancellationToken cancellationToken)
         {
+            
             var bodyPart = new Domain.BodyPart.Entities.BodyPart
             {
                 BodyPartName = request.BodyPartName,
