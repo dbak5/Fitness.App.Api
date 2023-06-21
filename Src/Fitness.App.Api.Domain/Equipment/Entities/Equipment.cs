@@ -4,7 +4,7 @@ public partial class Equipment
 {
     public int EquipmentId { get; set; }
 
-    public string? EquipmentName { get; set; }
+    public required string EquipmentName { get; set; }  
 
     public virtual ICollection<Program.Entities.Program> Programs { get; set; } = new List<Program.Entities.Program>();
 

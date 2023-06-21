@@ -5,7 +5,7 @@ namespace Fitness.App.Api.Application.Equipment.Commands
 {
     public class AddEquipmentCommand : IRequest<AddEquipmentResult>
     {
-        public string? EquipmentName { get; set; }
+        public required string EquipmentName { get; set; }
     }
 
     public record AddEquipmentResult(string Result);

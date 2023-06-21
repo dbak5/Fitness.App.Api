@@ -3,6 +3,7 @@
 public partial class Pb
 {
     public int PbId { get; set; }
+    public required string PbName { get; set; }
 
     public int? Workout { get; set; }
 

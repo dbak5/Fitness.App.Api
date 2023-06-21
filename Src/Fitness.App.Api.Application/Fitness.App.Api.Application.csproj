@@ -13,16 +13,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Pb\Commands\" />
     <Folder Include="Pb\Queries\" />
     <Folder Include="BodyPart\Queries\" />
-    <Folder Include="Category\Commands\" />
     <Folder Include="Category\Queries\" />
-    <Folder Include="Exercise\Commands\" />
     <Folder Include="Exercise\Queries\" />
-    <Folder Include="Workout\Commands\" />
     <Folder Include="Workout\Queries\" />
-    <Folder Include="Program\Commands\" />
     <Folder Include="Program\Queries\" />
     <Folder Include="Equipment\Queries\" />
   </ItemGroup>

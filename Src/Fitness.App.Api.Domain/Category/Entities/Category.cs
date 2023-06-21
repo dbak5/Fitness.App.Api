@@ -4,7 +4,7 @@ public partial class Category
 {
     public int CategoryId { get; set; }
 
-    public string? CategoryName { get; set; }
+    public required string CategoryName { get; set; }
 
     public virtual ICollection<Exercise.Entities.Exercise> Exercises { get; set; } = new List<Exercise.Entities.Exercise>();
 }

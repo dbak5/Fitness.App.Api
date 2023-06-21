@@ -1,4 +1,10 @@
+using Fitness.App.Api.Application.BodyPart.Commands;
+using Fitness.App.Api.Application.Category.Commands;
 using Fitness.App.Api.Application.Equipment.Commands;
+using Fitness.App.Api.Application.Exercise.Commands;
+using Fitness.App.Api.Application.Pb.Commands;
+using Fitness.App.Api.Application.Program.Commands;
+using Fitness.App.Api.Application.Workout.Commands;
 using Fitness.App.Api.Persistence;
 using Microsoft.EntityFrameworkCore;
 
@@ -17,7 +23,14 @@ builder.Services.AddDbContext<FitnessAppContext>(config =>
 });
 builder.Services.AddMediatR(config =>
 {
+    config.RegisterServicesFromAssemblyContaining<AddBodyPartCommandHandler>();
+    config.RegisterServicesFromAssemblyContaining<EditBodyPartCommandHandler>();
+    config.RegisterServicesFromAssemblyContaining<AddCategoryCommandHandler>();
     config.RegisterServicesFromAssemblyContaining<AddEquipmentCommandHandler>();
+    config.RegisterServicesFromAssemblyContaining<AddExerciseCommandHandler>();
+    config.RegisterServicesFromAssemblyContaining<AddPbCommandHandler>();
+    config.RegisterServicesFromAssemblyContaining<AddProgramCommandHandler>();
+    config.RegisterServicesFromAssemblyContaining<AddWorkoutCommandHandler>();
 });
 
 var app = builder.Build();

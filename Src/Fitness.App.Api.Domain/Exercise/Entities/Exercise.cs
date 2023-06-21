@@ -4,7 +4,7 @@ public partial class Exercise
 {
     public int ExerciseId { get; set; }
 
-    public string? ExerciseName { get; set; }
+    public required string ExerciseName { get; set; }
 
     public DateOnly? LastActivity { get; set; }
 

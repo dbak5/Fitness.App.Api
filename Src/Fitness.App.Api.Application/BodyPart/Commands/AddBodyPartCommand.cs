@@ -5,7 +5,8 @@ namespace Fitness.App.Api.Application.BodyPart.Commands
 {
     public class AddBodyPartCommand : IRequest<AddBodyPartResult>
     {
-        public string? EquipmentName { get; set; }
+        public required string BodyPartName { get; set; }
+        public required int BodyPartId{ get; set; }
     }
 
     public record AddBodyPartResult(string Result);
@@ -21,12 +22,13 @@ namespace Fitness.App.Api.Application.BodyPart.Commands
 
         public async Task<AddBodyPartResult> Handle(AddBodyPartCommand request, CancellationToken cancellationToken)
         {
-           var equipment = new Domain.Equipment.Entities.Equipment
+           var bodyPart = new Domain.BodyPart.Entities.BodyPart
            {
-               EquipmentName = request.EquipmentName
+               BodyPartId = request.BodyPartId,
+               BodyPartName = request.BodyPartName
            };
 
-           await _dbContext.Equipment.AddAsync(equipment, cancellationToken);
+           await _dbContext.BodyParts.AddAsync(bodyPart, cancellationToken);
            await _dbContext.SaveChangesAsync(cancellationToken);
            return new AddBodyPartResult("done");
         }

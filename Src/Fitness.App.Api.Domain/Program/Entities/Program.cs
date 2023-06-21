@@ -4,7 +4,7 @@ public partial class Program
 {
     public int ProgramId { get; set; }
 
-    public string ProgramName { get; set; } = null!;
+    public required string ProgramName { get; set; }
 
     public int Day { get; set; }
 

@@ -4,6 +4,8 @@ public partial class Workout
 {
     public int WorkoutId { get; set; }
 
+    public required string WorkoutName { get; set; }
+
     public int? Exercise { get; set; }
 
     public int? Equipment { get; set; }
